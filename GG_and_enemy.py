@@ -1,3 +1,4 @@
+# thorax - грудь, stomach - живот
 class Player():
     def glavniy_geroy():
         head, thorax, stomach = 35, 85, 70
