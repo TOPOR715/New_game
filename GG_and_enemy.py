@@ -21,6 +21,7 @@ class Player():
             "full_hp": head + thorax + stomach + left_arm + right_arm + left_leg + right_leg
         }
         return data
+    
 
 
 class Enemy(): 

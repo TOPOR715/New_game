@@ -1,11 +1,14 @@
 import GG_and_enemy
 import item
+import view
 
 Hero = GG_and_enemy.Player.glavniy_geroy()
+printik = view
 
 def Main_menu():
     print('''1. начать игру
 2. Посмотреть персонажа
+3. Выход
           ''')
     
 while True:
@@ -15,26 +18,15 @@ while True:
         if enter_user == 1:
             x = input("Введите имя: ")
             Hero["Name"] = x
-            print(f'''Ваш персонаж создан:
-Имя: {Hero["Name"]}
-Позывной: {Hero["Firstname"]}
-Возраст: {Hero["Age"]}
-Описание: {Hero["dop_data"]}
-Инвентарь: {Hero["inventar"]}
-Хп в голове: {Hero["head"]}
-Хп в груди: {Hero["thorax"]}
-Хп в левой руке: {Hero["left arm"]}
-Хп в правой руке: {Hero["right arm"]}
-Хп в животе: {Hero["stomach"]}
-Хп в левой ноге: {Hero["left leg"]}
-Хп в правой ноге: {Hero["right leg"]}
-Хп всего: {Hero["full_hp"]}
 
-
-
-
-
-''')
+            x = int(input("Введите Возраст от 18 до 50: "))
+            if 18 <= x <= 50:
+                Hero["Age"] = x
+                printik.show_hero(Hero)
+            else:
+                print("Возраст должен быть от 18 до 50!")
+        elif enter_user == 3:
+            break
 
     except:
         print("Шо ты ввёл мудак? Вводи только цифры блэат!")
