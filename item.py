@@ -25,5 +25,3 @@ class Item():
         weapon_name = random.choice(list(weapons.keys()))
         return {weapon_name: weapons[weapon_name]}
     
-# guns = item
-# print(guns.weapon())
