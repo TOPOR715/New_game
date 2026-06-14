@@ -7,12 +7,12 @@ Hero = GG_and_enemy.Player.glavniy_geroy()
 printik = view
 
 def Main_menu():
-    print('''1. начать игру
+    print('''1. начать игру/создать персонажа
 2. Посмотреть персонажа
 3. Выход
           ''')
     
-pyglet.media.load("Dvorovye_pesni_-_Ty_ne_prishla_i_khujj_s_tobojj_62486589.mp3").play()
+# pyglet.media.load("Dvorovye_pesni_-_Ty_ne_prishla_i_khujj_s_tobojj_62486589.mp3").play()
 
 while True:
     Main_menu()
@@ -22,6 +22,9 @@ while True:
 
             x = input("Введите имя: ")
             Hero["Name"] = x
+
+            x = str(input("Введите позывной: "))
+            Hero["Firstname"] = x
 # =====================================================================
             try:
                 x = int(input("Введите Возраст от 18 до 50: "))
@@ -31,9 +34,10 @@ while True:
                     print("Возраст должен быть от 18 до 50!")
             except:
                 ("Введите возраст цифрами!")
-
-            x = str(input("Введите позывной: "))
-            Hero["Firstname"] = x
+            
+            x = input("Введите описание персонажа(не обязательно): ")
+            if x == None:
+                Hero["dop_data"] = "Описание отсуствует"
 
 # =====================================================================            
         elif enter_user == 2:
