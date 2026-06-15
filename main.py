@@ -2,6 +2,7 @@ import GG_and_enemy
 import item
 import view
 import pyglet
+import json
 
 Hero = GG_and_enemy.Player.glavniy_geroy()
 printik = view
@@ -37,7 +38,10 @@ while True:
             
             x = input("Введите описание персонажа(не обязательно): ")
             if x == None:
-                Hero["dop_data"] = "Описание отсуствует"
+                if x == "" or x is None:
+                    Hero["dop_data"] = "Описание отсутствует"
+                else:
+                    Hero["dop_data"] = x
 
 # =====================================================================            
         elif enter_user == 2:

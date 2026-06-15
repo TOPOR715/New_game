@@ -20,6 +20,10 @@ class Item():
             }
         }
     
+    def food():
+        canned_food={}
+
+    
     @staticmethod
     def get_random_weapon():
         weapons = Item.weapon()
