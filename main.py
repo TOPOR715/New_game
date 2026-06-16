@@ -1,22 +1,15 @@
 import GG_and_enemy
 import item
 import view
-import pyglet
 import json
+import music
+
 
 Hero = GG_and_enemy.Player.glavniy_geroy()
-printik = view
-
-def Main_menu():
-    print('''1. начать игру/создать персонажа
-2. Посмотреть персонажа
-3. Выход
-          ''')
-    
-# pyglet.media.load("Dvorovye_pesni_-_Ty_ne_prishla_i_khujj_s_tobojj_62486589.mp3").play()
+music.play_random_music()
 
 while True:
-    Main_menu()
+    view.Main_menu()  
     try:
         enter_user = int(input("Введите число тут: "))
         if enter_user == 1:

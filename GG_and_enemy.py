@@ -56,7 +56,10 @@ class trader():
             "Firstname": None,
             "Age":None,
             "dop_data": None,
-            "inventar": [],
+            "inventar": {"Еда":None,
+                         "Оружие":None,
+                         "Патроны": None,
+                         "Медицина":None},
             "Money":random.randint(5000, 10000)
                 }
         return data

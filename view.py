@@ -17,3 +17,10 @@ def show_hero(hero_data):
 Хп в правой ноге: {hero_data["right leg"]}
 Хп всего: {hero_data["full_hp"]}
 ''')
+    
+def Main_menu():
+    print('''1. начать игру/создать персонажа
+2. Посмотреть персонажа
+3. Выход
+          ''')
+    return
