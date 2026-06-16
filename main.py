@@ -1,50 +1,47 @@
-import GG_and_enemy
+import characters
 import item
 import view
 import json
 import music
+import sys
+import save
 
+# Hero - Наш гг, в который потом пойдут данные
+Hero = characters.Player.glavniy_geroy()
+# Музыку в бар перетащим
+# music.play_random_music()
 
-Hero = GG_and_enemy.Player.glavniy_geroy()
-music.play_random_music()
 
 while True:
     view.Main_menu()  
     try:
-        enter_user = int(input("Введите число тут: "))
+        # Ввод юзера
+        enter_user = int(input("> "))
         if enter_user == 1:
+            view.create_person(Hero)
+            save.save_hero()
+            break
 
-            x = input("Введите имя: ")
-            Hero["Name"] = x
-
-            x = str(input("Введите позывной: "))
-            Hero["Firstname"] = x
-# =====================================================================
-            try:
-                x = int(input("Введите Возраст от 18 до 50: "))
-                if 18 <= x <= 50:
-                    Hero["Age"] = x
-                else:
-                    print("Возраст должен быть от 18 до 50!")
-            except:
-                ("Введите возраст цифрами!")
-            
-            x = input("Введите описание персонажа(не обязательно): ")
-            if x == None:
-                if x == "" or x is None:
-                    Hero["dop_data"] = "Описание отсутствует"
-                else:
-                    Hero["dop_data"] = x
-
-# =====================================================================            
         elif enter_user == 2:
                 if Hero["Name"] is None:
                     print("Сначала создайте персонажа!")
                 else:
                     view.show_hero(Hero)
         elif enter_user == 3:
-            break
+            if save.hero_exists():
+                Hero = save.load_hero()
+                print("Игра загружена!")
+                break
+            else:
+                print("Нет сохранения! Создай персонажа.")
 
-    except:
+        elif enter_user == 4:
+            sys.exit()
+
+    except Exception:
         print("Шо ты ввёл мудак? Вводи только цифры блэат!")
+
+while True:
+        view.Menu_bar()
+        enter_user = int(input("> "))
 

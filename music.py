@@ -2,7 +2,7 @@ import random
 from playsound3 import playsound
 import threading
 
-my_music = ["Dvorovye_pesni_-_Ty_ne_prishla_i_khujj_s_tobojj_62486589.mp3",
+my_music = [#"Dvorovye_pesni_-_Ty_ne_prishla_i_khujj_s_tobojj_62486589.mp3",
             "STALKER BLUES - Русская Дорога [audiovk.com].mp3",
             "Рок-Острова - Ничего не говори [audiovk.com].mp3",
             "Сплин - Мы сидели и курили [audiovk.com].mp3",
