@@ -1,0 +1,20 @@
+{
+    "Name": "Александр",
+    "Firstname": "Турист",
+    "Age": 24,
+    "dop_data": "Описание отсутствует",
+    "inventar": [],
+    "Money": 0,
+    "hunger": 100,
+    "thirst": 100,
+    "head": 35,
+    "thorax": 85,
+    "stomach": 70,
+    "left arm": 60,
+    "right arm": 60,
+    "left leg": 65,
+    "right leg": 65,
+    "full_hp": 440,
+    "Blood": 5500,
+    "weapon": null
+}

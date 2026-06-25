@@ -8,8 +8,9 @@ import save
 
 # Hero - Наш гг, в который потом пойдут данные
 Hero = characters.Player.glavniy_geroy()
-# Музыку в бар перетащим
-# music.play_random_music()
+Hi_jaba = characters.trader.random_hi()
+goodbye_jaba = characters.trader.random_goodbye()
+
 
 
 while True:
@@ -19,7 +20,7 @@ while True:
         enter_user = int(input("> "))
         if enter_user == 1:
             view.create_person(Hero)
-            save.save_hero()
+            save.save_hero(Hero)
             break
 
         elif enter_user == 2:
@@ -35,13 +36,17 @@ while True:
             else:
                 print("Нет сохранения! Создай персонажа.")
 
-        elif enter_user == 4:
+        elif enter_user == 0:
             sys.exit()
 
     except Exception:
         print("Шо ты ввёл мудак? Вводи только цифры блэат!")
-
+# Сама игра
+# music.play_random_music()
 while True:
         view.Menu_bar()
-        enter_user = int(input("> "))
+        enter_user_bar = int(input("\n> "))
+        if enter_user_bar == 3:
+            while True:
+                print(Hi_jaba)
 
