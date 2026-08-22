@@ -27,14 +27,15 @@ def show_hero(hero_data):
 Инвентарь: {hero_data["inventar"]}
 Голод: {hero_data["hunger"]}
 Жажда: {hero_data["thirst"]}
-Хп в голове: {hero_data["head"]}
-Хп в груди: {hero_data["thorax"]}
-Хп в левой руке: {hero_data["left arm"]}
-Хп в правой руке: {hero_data["right arm"]}
-Хп в животе: {hero_data["stomach"]}
-Хп в левой ноге: {hero_data["left leg"]}
-Хп в правой ноге: {hero_data["right leg"]}
-Хп всего: {hero_data["full_hp"]}
+Энергия: {hero_data["energy"]}
+HP в голове: {hero_data["head"]}
+HP в груди: {hero_data["thorax"]}
+HP в левой руке: {hero_data["left arm"]}
+HP в правой руке: {hero_data["right arm"]}
+HP в животе: {hero_data["stomach"]}
+HP в левой ноге: {hero_data["left leg"]}
+HP в правой ноге: {hero_data["right leg"]}
+HP всего: {hero_data["full_hp"]}
 ''')
     
 # Создание перса
@@ -65,3 +66,9 @@ def create_person(Hero):
         Hero["dop_data"] = "Описание отсутствует"
     else:
         Hero["dop_data"] = x
+
+
+def menu_raid():
+    print('''
+1. Пошариться по округе
+2. вернуться в бар ''')

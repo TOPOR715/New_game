@@ -16,6 +16,7 @@ class Player():
             "Money":0,
             "hunger": 100,
             "thirst": 100,
+            "energy": 100,
             "head": head,
             "thorax": thorax,
             "stomach": stomach,
