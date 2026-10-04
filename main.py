@@ -6,7 +6,8 @@ import json
 import music
 import sys
 import save
-import colorama
+from colorama import init, Fore, Back, Style
+init(autoreset=True) # СБРОС СТИЛЯ ТЕКСТА
 
 # Hero - Наш гг, в который потом пойдут данные
 Hero = characters.Player.glavniy_geroy()
@@ -22,7 +23,6 @@ while True:
         enter_user = int(input("> "))
         if enter_user == 1:
             view.create_person(Hero)
-            save.save_hero(Hero)
             break
 
         elif enter_user == 2:
@@ -41,8 +41,8 @@ while True:
         elif enter_user == 0:
             sys.exit()
 
-    except Exception:
-        print("Шо ты ввёл мудак? Вводи только цифры блэат!")
+    except ValueError:
+        print(Fore.GREEN + "\nШо ты ввёл мудак? Вводи только цифры блэат!\n")
 # Сама игра
 # music.play_random_music()
 while True:
@@ -54,8 +54,5 @@ while True:
                     print (Hi_jaba)
                     view.traid_menu()
                     enter_user_bar = int(input("\n> "))
-        except:
+        except ValueError:
              print("Введите число\n")
-
-
-

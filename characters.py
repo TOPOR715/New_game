@@ -56,7 +56,7 @@ class Enemy():
         }
         return data
     
-class trader():
+class Trader():
     @staticmethod
     def Jaba():
         data = {
