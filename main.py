@@ -1,15 +1,17 @@
 import characters
+import dialogi
 import item
 import view
 import json
 import music
 import sys
 import save
+import colorama
 
 # Hero - Наш гг, в который потом пойдут данные
 Hero = characters.Player.glavniy_geroy()
-Hi_jaba = characters.trader.random_hi()
-goodbye_jaba = characters.trader.random_goodbye()
+Hi_jaba = dialogi.random_hi()
+goodbye_jaba = dialogi.random_goodbye()
 
 
 
@@ -44,9 +46,16 @@ while True:
 # Сама игра
 # music.play_random_music()
 while True:
-        view.Menu_bar()
-        enter_user_bar = int(input("\n> "))
-        if enter_user_bar == 3:
-            while True:
-                print(Hi_jaba)
+        try:
+            view.Menu_bar()
+            enter_user_bar = int(input("\n> "))
+            if enter_user_bar == 3:
+                while True:
+                    print (Hi_jaba)
+                    view.traid_menu()
+                    enter_user_bar = int(input("\n> "))
+        except:
+             print("Введите число\n")
+
+
 
